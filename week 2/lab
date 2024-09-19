@@ -1,0 +1,5 @@
+full_name= "cloud rana"
+first_letter="cloud"
+last_name="rana"
+initialled_name = (first_letter +". "+ last_name)
+print(initialled_name)

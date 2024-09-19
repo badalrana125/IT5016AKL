@@ -1,0 +1,6 @@
+greeting = "hello world" 
+first_letter = greeting[0:5]
+last_position = greeting[6:11]
+
+print(first_letter, last_position)
+

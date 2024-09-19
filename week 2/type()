@@ -1,0 +1,9 @@
+num1 = 7
+num2 = 26.7
+word = "numero"
+
+print(type(num1))
+print(type(num2))
+print(type(word))
+print()
+print("\"super\" man")

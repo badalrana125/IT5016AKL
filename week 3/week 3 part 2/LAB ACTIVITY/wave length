@@ -1,0 +1,24 @@
+def color():
+  message = "welcome to wavelength to colour converter"
+  print(message)
+  wavelength = int(input("Please enetr an integer wavelength between 380 and 750>>385:"))
+  print("thank you, the wavelength that you entered is nanometer is:",wavelength)
+  colour = "the colour for this wavelength is..."
+  print(colour)
+  wavelength = float(input())
+  if wavelength >= 380 and wavelength <450:
+   print("violet")
+  elif wavelength >= 450 and wavelength <495:
+   print("blue")
+  elif wavelength >= 495 and wavelength <570:
+   print("green")
+  elif wavelength >= 570 and wavelength <590:
+   print("yellow")
+  elif wavelength >= 590 and wavelength <620:
+   print("blue")  
+  elif wavelength >= 620 and wavelength <750:
+   print("red")
+  else:
+   print("wavelength is out outside of visible")
+   
+color()

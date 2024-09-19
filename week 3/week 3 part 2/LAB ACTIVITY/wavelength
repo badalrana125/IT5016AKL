@@ -1,0 +1,14 @@
+def wavelength():
+    message = "welcome to wavelength to colour converter"
+    print(message) 
+    color = float(input("Please enetr an integer wavelength between 380 and 750>>385:"))
+    if(color >= 380 and color<= 750) and (color>= 620 and color<= 750):
+         print(f"Thank you, the wavelength that you enter is nanometer 380 , {color} .your color is Red") 
+    elif(color >= 380 and color<= 750) and (color>= 590 and color<= 620): print(f"Thank you, the wavelength that you enter is nanometer: {color} your color is Orange")
+    elif(color >= 380 and color<= 750) and (color>= 570 and color<= 590): print(f"Thank you, the wavelength that you enter is nanometer: {color} your color is Yellow") 
+    elif(color >= 380 and color<= 750) and (color>= 495 and color<= 570): print(f"Thank you, the wavelength that you enter is nanometer: {color} your color is Green") 
+    elif(color >= 380 and color<= 750) and (color>= 450 and color<= 495): print(f"Thank you, the wavelength that you enter is nanometer: {color} your color is Blue") 
+    elif(color >= 380 and color<= 750) and (color>= 380 and color<= 450): print(f"Thank you, the wavelength that you enter is nanometer: {color} your color is voilet")
+    else:
+         print("the wave length is not valid")
+wavelength() 

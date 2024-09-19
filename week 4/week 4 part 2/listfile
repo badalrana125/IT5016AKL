@@ -1,0 +1,6 @@
+animals = ['lion', 'elephant', 'tiger', 'giraffe']
+
+animals.append('zebra') 
+print(animals)
+
+

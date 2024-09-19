@@ -1,0 +1,5 @@
+name = (input("enter your name:"))
+birth_year = int(input("enter your birthyear:"))
+currentyear = int(input("current year: "))
+year_of_birth = int(currentyear - birth_year)
+print(name,year_of_birth)

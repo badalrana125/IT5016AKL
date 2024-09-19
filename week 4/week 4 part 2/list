@@ -1,0 +1,30 @@
+my_list = [1, 2, 3,'apple','lemon']
+#append=adds an elements to the end.
+my_list.append(6)
+print(my_list)
+print()
+
+#insert = insert an element at a specific position.
+my_list.insert(1,20)
+print(my_list)
+print()
+
+#remove = removes the first occurrence of an elements.
+my_list.remove(2)
+print(my_list)
+print()
+
+#pop = removes an elemets at a specific position.
+poped_elements = my_list.pop()
+print(my_list)
+print()
+
+#sort = sorts the list in place.
+my_list.sort(key=str)
+print(my_list)
+print()
+
+#reverse = reverses th list in place
+my_list.reverse()
+print(my_list)
+print()

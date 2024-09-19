@@ -1,0 +1,9 @@
+def BMI(weight,height):
+    total = weight/(height/100)** 2
+    return total
+   
+weight = int(input("enter your weight: "))
+height = int(input("enter your height: "))
+
+print(BMI(weight,height))
+

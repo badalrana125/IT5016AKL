@@ -1,0 +1,21 @@
+def earthquake():
+  magnitude = float(input("please enter magnitude of earthquake:"))
+  if magnitude < 2.0:
+    print("micro")
+  elif 2.0 <= magnitude <3.0:
+    print("veryminor")
+  elif 3.0 <= magnitude <4.0:
+    print("minor")
+  elif 4.0 <= magnitude <5.0:
+    print("light")
+  elif 5.0 <= magnitude <6.0:
+    print("modertae")
+  elif 6.0 <= magnitude <7.0:
+    print("strong")
+  elif 7.0 <= magnitude <8.0:
+    print("major")
+  elif 8.0 <= magnitude <10.0:
+    print("great")
+  else:
+   print ("the earthquake is moderate")
+earthquake()
