@@ -30,7 +30,8 @@ my_electric_Car.display_info()
 
 1. DRY (Don't Repeat Yourself)
 Principle: The DRY principle advocates for reducing code duplication. Each piece of knowledge should have a single, unambiguous representation in the system.
-In the provided code, the display_info method in the ElectricCar class calls the display_info method of the parent Car class using super(). This avoids code duplication, as the common functionality for displaying car information is centralized in the Car class.
+In the provided code, the display_info method in the ElectricCar class calls the display_info method of the parent Car class using super(). This avoids code duplication,
+as the common functionality for displaying car information is centralized in the Car class.
 
 Importance: By applying to the DRY principle, the code becomes easier to maintain and less error-prone. Changes to the way car information is displayed only need to be made in one place.
 
