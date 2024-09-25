@@ -71,6 +71,19 @@ def __init__(self, color, model, year, battery_capacity, fuel_type):
 
 def display_info(self):
         super().display_info()
-        print(f"Fuel Type: {self.fuel_type}")
+        print(f"Fuel Type: {self.fuel_type}")    
+
+4. YAGNI (You Aren’t Gonna Need It)
+The YAGNI principle suggests that you should not implement features until they are necessary. This prevents over-engineering and keeps the codebase clean.
+Code Application:
+The current implementation focuses on essential features: driving, stopping, and displaying information. No unnecessary methods or attributes are added.
+Example: If you think you might need a charging method in the future, you can wait until it becomes necessary. For now, the classes remain simple.
+
+5. Clean Code
+Principle Explanation: Clean code is easy to read, understand, and maintain. It includes meaningful names, structured formatting, and minimal comments (if self-explanatory).
+The naming conventions used (like drive, stop, display_info) clearly convey their purpose. The structure is clean, with consistent spacing and indentation.
+def stop(self): 
+    print(f"The {self.color} {self.model} has stopped.")
+
 
 
