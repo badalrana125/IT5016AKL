@@ -73,17 +73,77 @@ def display_info(self):
         super().display_info()
         print(f"Fuel Type: {self.fuel_type}")    
 
-4. YAGNI (You Aren’t Gonna Need It)
-The YAGNI principle suggests that you should not implement features until they are necessary. This prevents over-engineering and keeps the codebase clean.
-Code Application:
-The current implementation focuses on essential features: driving, stopping, and displaying information. No unnecessary methods or attributes are added.
-Example: If you think you might need a charging method in the future, you can wait until it becomes necessary. For now, the classes remain simple.
+4. Single Responsibility Principle (SRP)
+Principle Explanation: A class should have only one reason to change, meaning it should only have one job or responsibility.
 
-5. Clean Code
-Principle Explanation: Clean code is easy to read, understand, and maintain. It includes meaningful names, structured formatting, and minimal comments (if self-explanatory).
-The naming conventions used (like drive, stop, display_info) clearly convey their purpose. The structure is clean, with consistent spacing and indentation.
-def stop(self): 
-    print(f"The {self.color} {self.model} has stopped.")
+Code Application:
+In our Car and ElectricCar classes, each class is focused on a specific aspect of a car: Car deals with general car functionalities, while ElectricCar manages electric-specific attributes like battery capacity.
+class Car: 
+    # Responsibilities: Define general car properties and behaviors
+If a requirement changes for electric cars, only the ElectricCar class needs modification, preserving the integrity of the Car class.
+
+5. Liskov Substitution Principle (LSP)
+Principle Explanation: Subtypes must be substitutable for their base types without affecting the correctness of the program. If a class is a subclass, it should be able to replace its superclass without any issues.
+Code Application:
+The ElectricCar class should behave like a Car. Any function that uses a Car type should work correctly with an ElectricCar instance.
+Example:
+
+python
+Copy code
+def test_car(car: Car):
+    car.drive()
+    car.stop()
+    car.display_info()
+
+my_electric_car = ElectricCar("white", "Tesla Model 3", 2022, 75)
+test_car(my_electric_car)  # This should work without any issues.
+This demonstrates that ElectricCar can be used wherever a Car is expected, thus satisfying LSP.
+
+6. Interface Segregation Principle (ISP)
+Principle Explanation: Clients should not be forced to depend on interfaces they do not use. This principle is about splitting larger interfaces into smaller, more specific ones.
+
+Code Application:
+While the current implementation does not explicitly utilize interfaces, we can imagine that if we were to add features for different types of vehicles (like flying cars), we could create specific interfaces for each vehicle type instead of forcing all classes to implement methods they don’t need.
+Example:
+
+python
+Copy code
+class Drivable:
+    def drive(self):
+        pass
+
+class Stoppable:
+    def stop(self):
+        pass
+
+class Car(Drivai, Stoppable):
+    # Implementation
+This way, a flying car class would not need to implement drive if it doesn’t make sense, adhering to ISP.
+
+7. Dependency Inversion Principle (DIP)
+Principle Explanation: High-level modules should not depend on low-level modules; both should depend on abstractions. Additionally, abstractions should not depend on details, details should depend on abstractions.
+Code Application:
+In our case, we could refactor the car behavior into interfaces or abstract classes. For example, if we had a CarEngine class, the Car class could depend on it rather than a concrete engine implementation.
+Example:
+
+python
+Copy code
+class Engine:
+    def start(self):
+        pass
+
+class ElectricEngine(Engine):
+    def start(self):
+        print("Electric engine starting...")
+
+class Car:
+    def __init__(self, engine: Engine):  
+        self.engine = engine
+
+def drive(self):
+        self.engine.start()
+        print("Driving...")
+This decouples the Car class from specific engine implementations, enhancing flexibility and testability.
 
 
 
