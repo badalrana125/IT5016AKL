@@ -1,4 +1,9 @@
+"""
 
+Author:Badal Rana
+Program: To show electiric car simulation
+
+"""
 class Car: 
     def __init__(self, color, model, year): 
         self.color= color 
@@ -14,11 +19,11 @@ class ElectricCar(Car):
     def __init__(self, color, model, year, battery_capacity): 
         super().__init__(color, model, year) 
         self.battery_capacity= battery_capacity 
-        
-   def display_info(self): 
-        super().display_info() 
-        print(f"Battery Capacity: {self.battery_capacity} kwh") 
-    #Create an ElectricCar instance 
+#to display the car info
+def display_info(self): 
+super().display_info() 
+print(f"Battery Capacity: {self.battery_capacity} kwh") 
+#Create an ElectricCar instance 
 my_electric_Car = ElectricCar("white","Tesla Model 3", 2022, 75) 
 my_electric_Car.drive()
 my_electric_Car.stop()
